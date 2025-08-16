@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #073b4c;
+    --secondary-color: #118ab2;
+    --bg-color: #f4f6f9;
+    --text-color: #333;
+    --card-bg: #fff;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0a667c;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.suggestion-box {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.suggestion-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* Dark Mode */
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --card-bg: #2b2b2b;
+}
